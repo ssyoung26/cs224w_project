@@ -1,0 +1,12 @@
+100% 36/36 [00:39<00:00,  1.10s/it]
+Epoch 0, Val PPL = 16.428, Val RMSD = 8.142
+Epoch 1, Val PPL = 15.786, Val RMSD = 6.056
+Epoch 2, Val PPL = 15.129, Val RMSD = 6.725
+Epoch 3, Val PPL = 14.551, Val RMSD = 7.418
+Epoch 4, Val PPL = 15.244, Val RMSD = 6.615
+Epoch 5, Val PPL = 13.698, Val RMSD = 5.021
+Epoch 6, Val PPL = 13.473, Val RMSD = 5.136
+Epoch 7, Val PPL = 13.252, Val RMSD = 5.263
+Epoch 8, Val PPL = 13.017, Val RMSD = 4.383
+Epoch 9, Val PPL = 12.656, Val RMSD = 6.221
+Test PPL = 13.021, Test RMSD = 6.399

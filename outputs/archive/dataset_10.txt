@@ -1,0 +1,21 @@
+ 70% 49/70 [00:42<00:18,  1.17it/s][50] Train PPL = 19.163
+Epoch 0, Val PPL = 15.933, Val RMSD = 8.596
+ 70% 49/70 [00:49<00:22,  1.05s/it][50] Train PPL = 15.741
+Epoch 1, Val PPL = 14.925, Val RMSD = 8.295
+ 70% 49/70 [00:48<00:27,  1.30s/it][50] Train PPL = 14.486
+Epoch 2, Val PPL = 13.536, Val RMSD = 6.650
+ 70% 49/70 [00:44<00:16,  1.26it/s][50] Train PPL = 13.476
+Epoch 3, Val PPL = 14.499, Val RMSD = 9.319
+ 70% 49/70 [00:50<00:21,  1.03s/it][50] Train PPL = 13.483
+Epoch 4, Val PPL = 13.404, Val RMSD = 6.726
+ 70% 49/70 [00:49<00:19,  1.08it/s][50] Train PPL = 13.127
+Epoch 5, Val PPL = 12.983, Val RMSD = 6.230
+ 70% 49/70 [00:43<00:16,  1.27it/s][50] Train PPL = 12.913
+Epoch 6, Val PPL = 13.021, Val RMSD = 5.618
+ 70% 49/70 [00:50<00:18,  1.13it/s][50] Train PPL = 12.726
+Epoch 7, Val PPL = 13.013, Val RMSD = 6.801
+ 70% 49/70 [00:44<00:20,  1.03it/s][50] Train PPL = 12.802
+Epoch 8, Val PPL = 13.023, Val RMSD = 5.526
+ 70% 49/70 [00:47<00:19,  1.09it/s][50] Train PPL = 12.381
+Epoch 9, Val PPL = 12.157, Val RMSD = 5.378
+Test PPL = 12.732, Test RMSD = 4.757

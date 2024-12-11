@@ -1,0 +1,12 @@
+,Test PPL,Test RMSD
+Micro,13.021,6.399
+Tiny,12.732,4.757
+Small,11.982,3.262
+Medium,10.313,2.491
+Large,10.724,2.624
+Full dataset (no antigen),8.16,2.433
+Full dataset (antigen),10.224,2.348
+L1 Loss,10.65,2.55
+Naive IPM,10.459,2.349
+Diffusion IPM no reg.,10.594,2.833
+Diffusion IPM reg.,10.152,2.278

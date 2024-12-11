@@ -1,0 +1,100 @@
+Namespace(train_path='data/sabdab_2022_02_40/train_data.jsonl', val_path='data/sabdab_2022_02_40/val_data.jsonl', test_path='data/sabdab_2022_02_40/test_data.jsonl', save_dir='ckpts/tmp', load_model=None, cdr_type='3', hidden_size=256, batch_tokens=100, k_neighbors=9, block_size=8, update_freq=1, depth=4, vocab_size=21, num_rbf=16, dropout=0.1, lr=0.001, clip_norm=5.0, epochs=10, seed=7, anneal_rate=0.9, print_iter=50)
+Training:1742, Validation:135, Test:140
+/content/RefineGNN/ab_train_2.py:112: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler()
+  0% 0/274 [00:00<?, ?it/s]/content/RefineGNN/ab_train_2.py:128: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast():
+/content/RefineGNN/structgen/hierarchical2.py:192: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/content/RefineGNN/structgen/protein_features.py:302: UserWarning: Using torch.cross without specifying the dim arg is deprecated.
+Please either pass the dim explicitly or simply use torch.linalg.cross.
+The default value of dim will change to agree with that of linalg.cross in a future release. (Triggered internally at ../aten/src/ATen/native/Cross.cpp:62.)
+  n_2 = F.normalize(torch.cross(u_2, u_1), dim=-1)
+/usr/local/lib/python3.10/dist-packages/torch/_dynamo/eval_frame.py:632: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In version 2.5 we will raise an exception if use_reentrant is not passed. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+ 18% 49/274 [00:46<03:18,  1.14it/s][50] Train PPL = 18.794
+ 36% 99/274 [01:26<02:18,  1.27it/s][100] Train PPL = 16.032
+ 54% 149/274 [02:08<02:29,  1.19s/it][150] Train PPL = 15.031
+ 73% 199/274 [02:47<01:05,  1.14it/s][200] Train PPL = 13.319
+ 91% 249/274 [03:34<00:22,  1.13it/s][250] Train PPL = 14.250
+100% 274/274 [03:58<00:00,  1.15it/s]
+  0% 0/23 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/utils/checkpoint.py:87: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+100% 23/23 [00:31<00:00,  1.38s/it]
+Epoch 0, Val PPL = 13.243, Val RMSD = 7.262
+ 18% 49/274 [00:45<08:38,  2.30s/it][50] Train PPL = 13.218
+ 36% 99/274 [01:28<02:31,  1.15it/s][100] Train PPL = 12.714
+ 54% 149/274 [02:18<01:46,  1.17it/s][150] Train PPL = 13.680
+ 73% 199/274 [03:03<00:56,  1.33it/s][200] Train PPL = 12.904
+ 91% 249/274 [03:45<00:24,  1.03it/s][250] Train PPL = 12.017
+100% 274/274 [04:09<00:00,  1.10it/s]
+100% 23/23 [00:31<00:00,  1.38s/it]
+Epoch 1, Val PPL = 11.879, Val RMSD = 6.188
+ 18% 49/274 [00:43<03:04,  1.22it/s][50] Train PPL = 11.944
+ 36% 99/274 [01:32<02:56,  1.01s/it][100] Train PPL = 12.561
+ 54% 149/274 [02:20<01:49,  1.14it/s][150] Train PPL = 12.471
+ 73% 199/274 [03:02<01:05,  1.15it/s][200] Train PPL = 11.412
+ 91% 249/274 [03:50<00:21,  1.19it/s][250] Train PPL = 11.918
+100% 274/274 [04:10<00:00,  1.09it/s]
+100% 23/23 [00:32<00:00,  1.40s/it]
+Epoch 2, Val PPL = 11.245, Val RMSD = 3.648
+ 18% 49/274 [00:43<03:08,  1.19it/s][50] Train PPL = 11.119
+ 36% 99/274 [01:30<03:19,  1.14s/it][100] Train PPL = 11.737
+ 54% 149/274 [02:22<02:07,  1.02s/it][150] Train PPL = 11.851
+ 73% 199/274 [03:04<01:04,  1.16it/s][200] Train PPL = 11.042
+ 91% 249/274 [03:47<00:19,  1.27it/s][250] Train PPL = 11.031
+100% 274/274 [04:12<00:00,  1.09it/s]
+100% 23/23 [00:33<00:00,  1.48s/it]
+Epoch 3, Val PPL = 10.951, Val RMSD = 4.061
+ 18% 49/274 [00:54<04:21,  1.16s/it][50] Train PPL = 11.113
+ 36% 99/274 [01:42<04:30,  1.55s/it][100] Train PPL = 10.960
+ 54% 149/274 [02:28<02:29,  1.20s/it][150] Train PPL = 10.490
+ 73% 199/274 [03:12<01:07,  1.11it/s][200] Train PPL = 10.599
+ 91% 249/274 [03:59<00:26,  1.04s/it][250] Train PPL = 10.933
+100% 274/274 [04:22<00:00,  1.04it/s]
+100% 23/23 [00:33<00:00,  1.46s/it]
+Epoch 4, Val PPL = 10.881, Val RMSD = 3.211
+ 18% 49/274 [00:55<03:26,  1.09it/s][50] Train PPL = 10.564
+ 36% 99/274 [01:40<02:03,  1.42it/s][100] Train PPL = 10.244
+ 54% 149/274 [02:28<02:09,  1.04s/it][150] Train PPL = 10.993
+ 73% 199/274 [03:15<01:04,  1.17it/s][200] Train PPL = 10.432
+ 91% 249/274 [04:01<00:24,  1.03it/s][250] Train PPL = 9.966
+100% 274/274 [04:24<00:00,  1.04it/s]
+100% 23/23 [00:34<00:00,  1.48s/it]
+Epoch 5, Val PPL = 10.398, Val RMSD = 2.710
+ 18% 49/274 [00:45<02:59,  1.25it/s][50] Train PPL = 10.127
+ 36% 99/274 [01:36<02:15,  1.29it/s][100] Train PPL = 10.459
+ 54% 149/274 [02:19<02:13,  1.07s/it][150] Train PPL = 9.902
+ 73% 199/274 [03:02<01:12,  1.04it/s][200] Train PPL = 10.441
+ 91% 249/274 [03:48<00:23,  1.05it/s][250] Train PPL = 9.799
+100% 274/274 [04:12<00:00,  1.09it/s]
+100% 23/23 [00:34<00:00,  1.51s/it]
+Epoch 6, Val PPL = 10.298, Val RMSD = 2.659
+ 18% 49/274 [00:54<04:30,  1.20s/it][50] Train PPL = 10.275
+ 36% 99/274 [01:38<02:50,  1.03it/s][100] Train PPL = 9.839
+ 54% 149/274 [02:27<01:41,  1.23it/s][150] Train PPL = 10.068
+ 73% 199/274 [03:12<01:00,  1.24it/s][200] Train PPL = 9.785
+ 91% 249/274 [03:54<00:20,  1.21it/s][250] Train PPL = 9.175
+100% 274/274 [04:14<00:00,  1.08it/s]
+100% 23/23 [00:31<00:00,  1.38s/it]
+Epoch 7, Val PPL = 10.182, Val RMSD = 3.069
+ 18% 49/274 [00:46<02:45,  1.36it/s][50] Train PPL = 9.481
+ 36% 99/274 [01:28<02:10,  1.34it/s][100] Train PPL = 9.728
+ 54% 149/274 [02:11<01:44,  1.19it/s][150] Train PPL = 9.038
+ 73% 199/274 [02:57<01:06,  1.13it/s][200] Train PPL = 9.844
+ 91% 249/274 [03:46<00:23,  1.06it/s][250] Train PPL = 9.577
+100% 274/274 [04:08<00:00,  1.10it/s]
+100% 23/23 [00:31<00:00,  1.39s/it]
+Epoch 8, Val PPL = 10.058, Val RMSD = 2.629
+ 18% 49/274 [00:42<03:38,  1.03it/s][50] Train PPL = 9.532
+ 36% 99/274 [01:26<02:44,  1.07it/s][100] Train PPL = 9.569
+ 54% 149/274 [02:17<04:39,  2.23s/it][150] Train PPL = 9.113
+ 73% 199/274 [02:58<00:59,  1.26it/s][200] Train PPL = 9.221
+ 91% 249/274 [03:49<00:24,  1.01it/s][250] Train PPL = 9.798
+100% 274/274 [04:10<00:00,  1.09it/s]
+100% 23/23 [00:31<00:00,  1.39s/it]
+Epoch 9, Val PPL = 9.544, Val RMSD = 2.624
+/content/RefineGNN/ab_train_2.py:157: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(best_ckpt)[0])
+100% 23/23 [00:31<00:00,  1.38s/it]
+Test PPL = 10.313, Test RMSD = 2.491

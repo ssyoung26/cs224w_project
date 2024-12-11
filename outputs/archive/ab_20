@@ -1,0 +1,70 @@
+Namespace(train_path='data/sabdab_2022_02_20/train_data.jsonl', val_path='data/sabdab_2022_02_20/val_data.jsonl', test_path='data/sabdab_2022_02_20/test_data.jsonl', save_dir='ckpts/tmp', load_model=None, cdr_type='3', hidden_size=256, batch_tokens=100, k_neighbors=9, block_size=8, update_freq=1, depth=4, vocab_size=21, num_rbf=16, dropout=0.1, lr=0.001, clip_norm=5.0, epochs=10, seed=7, anneal_rate=0.9, print_iter=50)
+Training:871, Validation:67, Test:70
+/content/RefineGNN/ab_train_2.py:112: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler()
+  0% 0/136 [00:00<?, ?it/s]/content/RefineGNN/ab_train_2.py:128: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast():
+/content/RefineGNN/structgen/hierarchical2.py:192: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/content/RefineGNN/structgen/protein_features.py:302: UserWarning: Using torch.cross without specifying the dim arg is deprecated.
+Please either pass the dim explicitly or simply use torch.linalg.cross.
+The default value of dim will change to agree with that of linalg.cross in a future release. (Triggered internally at ../aten/src/ATen/native/Cross.cpp:62.)
+  n_2 = F.normalize(torch.cross(u_2, u_1), dim=-1)
+/usr/local/lib/python3.10/dist-packages/torch/_dynamo/eval_frame.py:632: UserWarning: torch.utils.checkpoint: the use_reentrant parameter should be passed explicitly. In version 2.5 we will raise an exception if use_reentrant is not passed. use_reentrant=False is recommended, but if you need to preserve the current default behavior, you can pass use_reentrant=True. Refer to docs for more details on the differences between the two variants.
+  return fn(*args, **kwargs)
+ 36% 49/136 [00:41<01:05,  1.32it/s][50] Train PPL = 17.907
+ 73% 99/136 [01:30<00:34,  1.07it/s][100] Train PPL = 16.147
+100% 136/136 [02:04<00:00,  1.10it/s]
+  0% 0/13 [00:00<?, ?it/s]/usr/local/lib/python3.10/dist-packages/torch/utils/checkpoint.py:87: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+100% 13/13 [00:16<00:00,  1.23s/it]
+Epoch 0, Val PPL = 13.660, Val RMSD = 6.410
+ 36% 49/136 [00:52<01:14,  1.17it/s][50] Train PPL = 14.740
+ 73% 99/136 [01:33<00:33,  1.12it/s][100] Train PPL = 13.136
+100% 136/136 [02:08<00:00,  1.06it/s]
+100% 13/13 [00:16<00:00,  1.25s/it]
+Epoch 1, Val PPL = 14.045, Val RMSD = 6.653
+ 36% 49/136 [00:42<01:11,  1.22it/s][50] Train PPL = 13.783
+ 73% 99/136 [01:33<00:33,  1.12it/s][100] Train PPL = 13.921
+100% 136/136 [02:08<00:00,  1.06it/s]
+100% 13/13 [00:16<00:00,  1.23s/it]
+Epoch 2, Val PPL = 12.988, Val RMSD = 5.898
+ 36% 49/136 [00:42<01:06,  1.31it/s][50] Train PPL = 13.058
+ 73% 99/136 [01:33<00:33,  1.10it/s][100] Train PPL = 12.854
+100% 136/136 [02:07<00:00,  1.06it/s]
+100% 13/13 [00:16<00:00,  1.24s/it]
+Epoch 3, Val PPL = 13.533, Val RMSD = 5.854
+ 36% 49/136 [00:48<01:19,  1.10it/s][50] Train PPL = 13.037
+ 73% 99/136 [01:35<00:32,  1.13it/s][100] Train PPL = 12.164
+100% 136/136 [02:07<00:00,  1.06it/s]
+100% 13/13 [00:16<00:00,  1.24s/it]
+Epoch 4, Val PPL = 12.995, Val RMSD = 5.465
+ 36% 49/136 [00:39<01:08,  1.28it/s][50] Train PPL = 11.172
+ 73% 99/136 [01:32<00:29,  1.26it/s][100] Train PPL = 12.439
+100% 136/136 [02:07<00:00,  1.06it/s]
+100% 13/13 [00:16<00:00,  1.23s/it]
+Epoch 5, Val PPL = 12.007, Val RMSD = 6.324
+ 36% 49/136 [00:48<01:17,  1.13it/s][50] Train PPL = 11.781
+ 73% 99/136 [01:34<00:31,  1.17it/s][100] Train PPL = 11.057
+100% 136/136 [02:07<00:00,  1.07it/s]
+100% 13/13 [00:16<00:00,  1.23s/it]
+Epoch 6, Val PPL = 12.128, Val RMSD = 5.405
+ 36% 49/136 [00:40<01:15,  1.15it/s][50] Train PPL = 10.563
+ 73% 99/136 [01:32<00:32,  1.14it/s][100] Train PPL = 11.026
+100% 136/136 [02:07<00:00,  1.06it/s]
+100% 13/13 [00:16<00:00,  1.23s/it]
+Epoch 7, Val PPL = 12.184, Val RMSD = 6.394
+ 36% 49/136 [00:44<01:07,  1.29it/s][50] Train PPL = 10.429
+ 73% 99/136 [01:37<01:13,  1.99s/it][100] Train PPL = 11.313
+100% 136/136 [02:07<00:00,  1.06it/s]
+100% 13/13 [00:16<00:00,  1.24s/it]
+Epoch 8, Val PPL = 11.318, Val RMSD = 3.183
+ 36% 49/136 [00:50<01:35,  1.09s/it][50] Train PPL = 10.651
+ 73% 99/136 [01:32<00:26,  1.39it/s][100] Train PPL = 9.467
+100% 136/136 [02:08<00:00,  1.06it/s]
+100% 13/13 [00:16<00:00,  1.23s/it]
+Epoch 9, Val PPL = 11.045, Val RMSD = 3.388
+/content/RefineGNN/ab_train_2.py:157: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(best_ckpt)[0])
+100% 13/13 [00:16<00:00,  1.23s/it]
+Test PPL = 11.982, Test RMSD = 3.262

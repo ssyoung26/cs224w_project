@@ -1,6 +1,6 @@
 Clone the repository from https://github.com/wengong-jin/RefineGNN
 
-Respository RefineGNN is structured like the following:
+Respository RefineGNN is structured like the following (open the file in a text editor):
 RefineGNN/
 ├─ ckpts/
 ├─ data/
